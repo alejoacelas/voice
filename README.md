@@ -1,20 +1,20 @@
 # Voice dictation
 
-I use [FluidVoice](https://github.com/altic-dev/FluidVoice) for dictation on macOS. This repo isn't FluidVoice itself — it's just my setup notes and the cleanup prompt I run, so I can reproduce it on a new machine and share what I changed. The setup follows Adam Jones's [dictation apps writeup](https://adamjones.me/blog/best-dictation-apps-2026/).
+I use [FluidVoice](https://github.com/altic-dev/FluidVoice) for dictation on macOS. This repo isn't FluidVoice — just my setup notes and the cleanup prompt, so I can reproduce it on a new machine. It follows Adam Jones's [dictation apps writeup](https://adamjones.me/blog/best-dictation-apps-2026/).
 
-This is an early report — I've only used it for about ten minutes — but the transcription is already noticeably better than Wispr Flow in a few places. I'm planning to stick with FluidVoice because it's open source and lets me pick whichever speech model is best, which right now is NVIDIA's Parakeet TDT v2.
+Early report (about ten minutes in), but transcription already beats Wispr Flow in a few places. I'm sticking with it because it's open source and lets me pick the best speech model — right now NVIDIA's Parakeet TDT v2.
 
 ## My setup
 
-Install it with `brew install --cask fluidvoice`. I run the Parakeet TDT v2 (English) speech model and let Claude Haiku 4.5 handle cleanup through the Anthropic provider.
+Install with `brew install --cask fluidvoice`. I run Parakeet TDT v2 (English) for speech and Claude Haiku 4.5 for cleanup via the Anthropic provider.
 
-The trigger is the `Fn` key in toggle mode: I press it once to start and once more to stop, rather than holding it down the whole time. That's the main thing I changed from the defaults. Holding a key meant staying parked at the keyboard, whereas toggling lets me walk away and makes long dictations — ten minutes or more — much more comfortable.
+The trigger is `Fn` in toggle mode — tap once to start, tap again to stop, instead of holding it down. It's the main thing I changed: toggling lets me walk away from the keyboard and makes long dictations much more comfortable.
 
-For cleanup I use a light-touch prompt (below) that fixes obvious transcription errors but otherwise leaves my words, fillers, and phrasing intact.
+Cleanup uses a light-touch prompt (below) that fixes obvious errors but leaves my words, fillers, and phrasing intact.
 
 ## First run
 
-When you first launch FluidVoice, grant Microphone access when macOS asks and then enable FluidVoice under `System Settings > Privacy & Security > Accessibility`. If it prompts for the Parakeet TDT v2 model, let it download. Finally, open `AI Enhancements`, add the Anthropic provider, select Claude Haiku 4.5, and paste in the cleanup prompt.
+Grant Microphone access when macOS asks, then enable FluidVoice under `System Settings > Privacy & Security > Accessibility`. Let the Parakeet TDT v2 model download if prompted. Finally, open `AI Enhancements`, add the Anthropic provider, select Claude Haiku 4.5, and paste in the cleanup prompt.
 
 ## Cleanup prompt
 
@@ -47,4 +47,4 @@ Return only the cleaned text:
 
 ## Using it
 
-Put your cursor in any text field, tap `Fn` to start recording, speak, then tap `Fn` again to stop. FluidVoice transcribes, runs the cleanup pass, and pastes the result at your cursor.
+Put your cursor in any text field, tap `Fn`, speak, then tap `Fn` again. FluidVoice transcribes, cleans up, and pastes at your cursor.
