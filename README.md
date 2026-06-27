@@ -8,7 +8,7 @@ Early report (about ten minutes in), but transcription already beats Wispr Flow 
 
 Install with `brew install --cask fluidvoice`. I run Parakeet TDT v2 (English) for speech and Claude Haiku 4.5 for cleanup via the Anthropic provider.
 
-The trigger is `Fn` in toggle mode — tap once to start, tap again to stop, instead of holding it down. It's the main thing I changed: toggling lets me walk away from the keyboard and makes long dictations much more comfortable.
+The trigger is `Fn` in toggle mode — tap once to start, tap again to stop, instead of holding it down. It's the main thing I changed: toggling lets me walk away from the keyboard and makes long dictations much more comfortable. I also switched on keeping the voice recordings, so the original audio sticks around.
 
 Cleanup uses a light-touch prompt (below) that fixes obvious errors but leaves my words, fillers, and phrasing intact.
 
