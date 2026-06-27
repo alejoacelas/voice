@@ -1,0 +1,4 @@
+# FluidVoice is its own project (see the link in the README) — don't vendor the clone.
+FluidVoice/
+.env
+.DS_Store
